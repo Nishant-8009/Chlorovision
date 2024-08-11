@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!-- Declare your ViewModel here if you have one -->
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.plot.PlotActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:contentDescription="Graphical Representation"
+            android:theme="?attr/actionBarTheme"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_margin="16dp">-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/xLive"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@+id/xLive"-->
+<!--                        android:layout_margin="16dp"-->
+<!--                        android:layout_weight="0.15"-->
+<!--                        android:background="@drawable/ic_tbr_cell_shape"-->
+<!--                        android:padding="10dp"-->
+<!--                        android:text="Hello"-->
+<!--                        android:textSize="18sp"-->
+<!--                        app:layout_constraintStart_toEndOf="parent"-->
+<!--                        app:layout_constraintTop_toBottomOf="@id/toolbar" />-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/yLive"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@+id/xLive"-->
+<!--                        android:layout_margin="16dp"-->
+<!--                        android:layout_weight="0.15"-->
+<!--                        android:background="@drawable/ic_tbr_cell_shape"-->
+<!--                        android:padding="10dp"-->
+<!--                        android:text="Hello"-->
+<!--                        android:textSize="18sp"-->
+<!--                        app:layout_constraintStart_toEndOf="parent"-->
+<!--                        app:layout_constraintTop_toBottomOf="@id/toolbar" />-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/zLive"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@+id/xLive"-->
+<!--                        android:layout_margin="16dp"-->
+<!--                        android:layout_weight="0.15"-->
+<!--                        android:background="@drawable/ic_tbr_cell_shape"-->
+<!--                        android:padding="10dp"-->
+<!--                        android:text="Hello"-->
+<!--                        android:textSize="18sp"-->
+<!--                        app:layout_constraintStart_toEndOf="parent"-->
+<!--                        app:layout_constraintTop_toBottomOf="@id/toolbar" />-->
+<!--                </LinearLayout>-->
+
+                <TextView
+                    android:id="@+id/detailsLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="X Plot"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+                <!--            android:layout_below="@+id/toolbar"-->
+                <!--            android:layout_alignParentEnd="true"-->
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/xChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/detailsLabel"
+                    android:layout_margin="16dp" />
+
+                <TextView
+                    android:id="@+id/detailsLabely"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Y Plot"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+                <!--            android:layout_below="@+id/xChart"-->
+                <!--            android:layout_alignParentEnd="true"-->
+                <!--                    />-->
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/yChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/detailsLabely"
+                    android:layout_margin="16dp" />
+                <TextView
+                    android:id="@+id/detailsLabelz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Z Plot"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+                <!--            android:layout_below="@+id/yChart"-->
+                <!--            android:layout_alignParentEnd="true"-->
+
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/zChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/detailsLabelz"
+                    android:layout_margin="16dp" />
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>
